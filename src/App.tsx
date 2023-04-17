@@ -26,7 +26,7 @@ function App() {
                 .getElementById("gameover")!
                 .click()
         })
-        //setDefined(true)
+        setDefined(true)
     }
 
     _player.updater = (p) => {
