@@ -1,7 +1,7 @@
 
-import React, { useContext, useState } from "react"
+import React from "react"
 import * as _ from "../chess/piece"
-import Dot from "./dot"
+import "./style/piece.css"
 
 
 
@@ -19,13 +19,8 @@ function Piece(
 
 
     function move(i: number, j:number){
-
-        console.log("let's fucking move", i, j)
-
-        onSelect(ID, move)
-
+        onSelect(ID, () => {})
         onUpdate(i, j)
-    
     }
 
     function update(ev: React.MouseEvent){

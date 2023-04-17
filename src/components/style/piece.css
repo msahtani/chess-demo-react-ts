@@ -1,0 +1,20 @@
+
+.piece {
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+}
+
+.piece > img {
+    background-color: transparent;
+    height: 64px;
+    width: 64px;
+    margin: auto;
+}
+
+.selected{
+    background-color: #496;
+}

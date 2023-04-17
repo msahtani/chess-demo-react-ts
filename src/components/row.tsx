@@ -8,7 +8,7 @@ function Row(i:number){
     }
 
     return <div 
-        className="row"
+        style={{display:"flex"}}
         key={"r" + i}
     >{squares}</div>
 }

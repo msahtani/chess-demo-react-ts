@@ -1,10 +1,13 @@
+import "./style/guide.css"
+
 function Dot(
-    i: number, 
-    j:number, 
+    loc: number,
     onClick: (arg0: number, arg1: number) => void
 ){
 
-    const ID = (9*i+j)+"d"
+    const [i, j] = [Math.floor(loc/8), loc%8]
+
+    const ID = "d"+loc
 
     return <div 
         className={"guide"} 

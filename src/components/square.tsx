@@ -1,3 +1,5 @@
+import "./style/square.css"
+
 function Square(i:number, j:number){
 
     const color = (i+j)%2 === 0 ? "yellow" : "brown"

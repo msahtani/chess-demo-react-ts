@@ -1,0 +1,12 @@
+#status{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#status > p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}

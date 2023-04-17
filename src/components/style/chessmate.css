@@ -1,0 +1,29 @@
+#block {
+    height: 512px;
+    width: 512px;
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    opacity: 0.6;
+    display: flex;
+}
+
+#blockp {
+    height: 512px;
+    width: 512px;
+    position: absolute;
+    z-index: 13;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#blockp  > div {
+    color: white;
+    margin: auto;
+}
+
+#blockp > div > * {
+    margin: 5px;
+}

@@ -1,82 +1,18 @@
-
-
 *{
     margin: 0;
     padding: 0;
+    
+}
+
+#root{
     background-color: indigo;
+    min-height: 100vh;
+    min-width: 520px;
+    display: flex;
 }
 
 #app{
     display: flex;
-    min-height: 100vh
-}
-
-#board {
-    display: flex;
     flex-direction: column;
     margin: auto;
-    position: relative;
-    
-}
-
-.square {
-    height: 64px;
-    width: 64px;
-    display: flex;
-}
-
-.row{
-    margin: auto;
-    display: flex;
-}
-
-
-.yellow{
-    background-color: wheat;
-}
-
-.brown {
-    background-color: brown;
-}
-
-.piece {
-    height: 64px;
-    width: 64px;
-    position: absolute;
-    background-color: transparent;
-    display: flex;
-    
-}
-
-.piece > img {
-    background-color: transparent;
-    height: 64px;
-    width: 64px;
-    margin: auto;
-}
-
-.guide{
-    height: 64px;
-    width: 64px;
-    position: absolute;
-    background-color: transparent;
-    display: flex;
-    z-index: 2;
-
-}
-
-.dot{
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background-color: green;
-    margin: auto;
-}
-
-.pointer{
-    cursor: pointer;
-}
-
-.selected{
-    background-color: #496;
 }

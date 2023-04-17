@@ -1,0 +1,16 @@
+.square {
+    height: 64px;
+    width: 64px;
+    display: flex;
+}
+
+
+
+
+.yellow{
+    background-color: wheat;
+}
+
+.brown {
+    background-color: brown;
+}

@@ -17,13 +17,32 @@ abstract class Piece{
         label: string, 
         dirs: number[][],
         mulStep = false
-        
     ){
         this._loc = loc
         this._color = color
         this._dirs = dirs
         this._id = label+this._color
         this._mulStep = mulStep
+    }
+
+    public static fromCode(code: string, loc: number): Piece{
+        const [t, c] = code.split("")
+        const color = c === "w" ? Color.WHITE : Color.BLACK
+
+        switch(t){
+            case "h":
+                return new Horse(loc, color)
+            case "b":
+                return new Bishop(loc, color)
+            case "r":
+                return new Rook(loc, color)
+            case "q":
+                return new Queen(loc, color)
+            case "k":
+                return new King(loc, color)
+        }
+
+        return new Pawn(loc, color)
     }
 
     get color(){
@@ -104,8 +123,9 @@ class Pawn extends Piece{
         }
 
         if(
-            (i === 6 && this.color === Color.WHITE) ||
-            (i === 1 && this.color === Color.BLACK)
+            ((i === 6 && this.color === Color.WHITE) ||
+            (i === 1 && this.color === Color.BLACK)) &&
+            !p
         ){
             possibleMoves.push((i+2*d)*8 + j)
         }
@@ -185,8 +205,6 @@ class Rook extends Piece{
 
     }
 }
-
-
 
 class King extends Piece{
     constructor(loc:number, color: Color){
